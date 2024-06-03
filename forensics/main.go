@@ -3,17 +3,17 @@ package main
 import (
 	"fmt"
 
-	"github.com/thaigoonch/securitywithgo/fileinfo"
-	"github.com/thaigoonch/securitywithgo/filesort"
+	"securitywithgo/forensics/info"
+	"securitywithgo/forensics/sort"
 )
 
 func main() {
 	fmt.Println(">>> Running getFileInfo():")
-	fileinfo.GetFileInfo()
+	info.GetFileInfo()
 
 	fmt.Println(">>> Running getLargeFiles():")
-	filesort.GetLargeFiles()
+	sort.GetLargeFiles()
 
 	fmt.Println(">>> Running GetMostRecentlyModifiedFiles():")
-	filesort.GetMostRecentlyModifiedFiles()
+	sort.GetMostRecentlyModifiedFiles()
 }

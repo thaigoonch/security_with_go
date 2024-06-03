@@ -1,4 +1,4 @@
-package filesort
+package sort
 
 import (
 	"container/list"
