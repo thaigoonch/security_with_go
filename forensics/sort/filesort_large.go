@@ -17,7 +17,6 @@ func GetLargeFiles() {
 		log.Fatal(err)
 	}
 	dir := filepath.Join(currentDir, "files")
-
 	GetFilesInDirRecursivelyBySize(fileList, dir, "size")
 
 	for element := fileList.Front(); element != nil; element = element.Next() {

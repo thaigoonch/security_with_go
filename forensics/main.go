@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 
+	"securitywithgo/forensics/bootsector"
 	"securitywithgo/forensics/info"
 	"securitywithgo/forensics/sort"
 )
@@ -16,4 +17,7 @@ func main() {
 
 	fmt.Println(">>> Running GetMostRecentlyModifiedFiles():")
 	sort.GetMostRecentlyModifiedFiles()
+
+	fmt.Println(">>> Running CheckBootSector():")
+	bootsector.CheckBootSector()
 }
