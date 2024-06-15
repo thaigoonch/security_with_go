@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"securitywithgo/forensics/bootsector"
+	"securitywithgo/forensics/image"
 	"securitywithgo/forensics/info"
 	"securitywithgo/forensics/sort"
 )
@@ -20,4 +21,7 @@ func main() {
 
 	fmt.Println(">>> Running CheckBootSector():")
 	bootsector.CheckBootSector()
+
+	fmt.Println(">>> Running GenImage():")
+	image.GenImage()
 }
