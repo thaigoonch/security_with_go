@@ -10,12 +10,12 @@ import (
 )
 
 func DetectZip() {
-	// Get the path to ../files
+	// Get the path to ../test_files
 	currentDir, err := os.Getwd()
 	if err != nil {
 		log.Fatal(err)
 	}
-	dir := filepath.Join(currentDir, "files")
+	dir := filepath.Join(currentDir, "test_files")
 
 	// Zip signature is "\x50\x4b\x03\x04"
 	filename := fmt.Sprintf("%s/stego_image.jpg", dir)

@@ -1,4 +1,4 @@
-package bootsector
+package files
 
 import (
 	"fmt"

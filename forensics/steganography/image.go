@@ -21,7 +21,7 @@ func CreateImage() {
 		myImage.Pix[3+pixelOffset] = 255                   // Alpha
 	}
 
-	imgName := "files/test.jpg"
+	imgName := "test_files/test.jpg"
 	outputFile, err := os.Create(imgName)
 	if err != nil {
 		log.Fatal(err)

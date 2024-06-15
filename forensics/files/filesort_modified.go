@@ -1,4 +1,4 @@
-package sort
+package files
 
 import (
 	"container/list"
@@ -11,12 +11,12 @@ import (
 func GetMostRecentlyModifiedFiles() {
 	fileList := list.New()
 
-	// Get the path to ../files
+	// Get the path to ../test_files
 	currentDir, err := os.Getwd()
 	if err != nil {
 		log.Fatal(err)
 	}
-	dir := filepath.Join(currentDir, "files")
+	dir := filepath.Join(currentDir, "test_files")
 	GetFilesInDirRecursivelyBySize(fileList, dir, "time")
 
 	for element := fileList.Front(); element != nil; element = element.Next() {

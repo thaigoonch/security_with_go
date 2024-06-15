@@ -13,12 +13,12 @@ import (
 )
 
 func HashFiles() {
-	// Get the path to ../files
+	// Get the path to ../test_files
 	currentDir, err := os.Getwd()
 	if err != nil {
 		log.Fatal(err)
 	}
-	dir := filepath.Join(currentDir, "files")
+	dir := filepath.Join(currentDir, "test_files")
 
 	files, err := ioutil.ReadDir(dir)
 	if err != nil {
