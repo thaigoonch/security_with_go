@@ -1,4 +1,4 @@
-package image
+package steganography
 
 import (
 	"fmt"
@@ -21,7 +21,7 @@ func GenImage() {
 		myImage.Pix[3+pixelOffset] = 255                   // Alpha
 	}
 
-	imgName := "test.jpg"
+	imgName := "files/test.jpg"
 	outputFile, err := os.Create(imgName)
 	if err != nil {
 		log.Fatal(err)
@@ -33,5 +33,5 @@ func GenImage() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Printf("image generated as %s\n", imgName)
+	fmt.Printf("image generated as %s\n\n", imgName)
 }

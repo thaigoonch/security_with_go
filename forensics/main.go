@@ -4,9 +4,9 @@ import (
 	"fmt"
 
 	"securitywithgo/forensics/bootsector"
-	"securitywithgo/forensics/image"
 	"securitywithgo/forensics/info"
 	"securitywithgo/forensics/sort"
+	"securitywithgo/forensics/steganography"
 )
 
 func main() {
@@ -23,5 +23,11 @@ func main() {
 	bootsector.CheckBootSector()
 
 	fmt.Println(">>> Running GenImage():")
-	image.GenImage()
+	steganography.GenImage()
+
+	fmt.Println(">>> Running HashFiles():")
+	steganography.HashFiles()
+
+	fmt.Println(">>> Running CreateZip():")
+	steganography.CreateZip()
 }
