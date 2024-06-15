@@ -22,12 +22,15 @@ func main() {
 	fmt.Println(">>> Running CheckBootSector():")
 	bootsector.CheckBootSector()
 
-	fmt.Println(">>> Running GenImage():")
-	steganography.GenImage()
+	fmt.Println(">>> Running CreateImage():")
+	steganography.CreateImage()
 
 	fmt.Println(">>> Running HashFiles():")
 	steganography.HashFiles()
 
 	fmt.Println(">>> Running CreateZip():")
 	steganography.CreateZip()
+
+	fmt.Println(">>> Running CreateHiddenArchive():")
+	steganography.CreateHiddenArchive()
 }

@@ -9,7 +9,7 @@ import (
 	"os"
 )
 
-func GenImage() {
+func CreateImage() {
 	// 100x200 pixels
 	myImage := image.NewRGBA(image.Rect(0, 0, 100, 200))
 

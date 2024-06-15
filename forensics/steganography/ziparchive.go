@@ -25,7 +25,8 @@ func CreateZip() {
 	}
 
 	// Create a new ZIP file
-	zipFile, err := os.Create(fmt.Sprintf("%s/test.zip", dir))
+	zipOut := fmt.Sprintf("%s/test.zip", dir)
+	zipFile, err := os.Create(zipOut)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -47,7 +48,7 @@ func CreateZip() {
 		}
 	}
 
-	fmt.Println("ZIP archive created successfully!")
+	fmt.Printf("ZIP archive created successfully: %s\n\n", zipOut)
 }
 
 // addFileToZip adds a file to the ZIP archive

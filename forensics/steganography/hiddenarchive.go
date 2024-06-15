@@ -8,7 +8,7 @@ import (
 	"path/filepath"
 )
 
-func ArchiveImage() {
+func CreateHiddenArchive() {
 	currentDir, err := os.Getwd()
 	if err != nil {
 		log.Fatal(err)
@@ -23,14 +23,15 @@ func ArchiveImage() {
 	defer firstFile.Close()
 
 	// Second file
-	secondFile, err := os.Open("test.zip")
+	secondFile, err := os.Open(fmt.Sprintf("%s/test.zip", dir))
 	if err != nil {
 		log.Fatal(err)
 	}
 	defer secondFile.Close()
 
 	// New file for output
-	newFile, err := os.Create("stego_image.jpg")
+	fileOut := fmt.Sprintf("%s/stego_image.jpg", dir)
+	newFile, err := os.Create(fileOut)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -45,4 +46,5 @@ func ArchiveImage() {
 	if err != nil {
 		log.Fatal(err)
 	}
+	fmt.Printf("hidden archive created successfully: %s\n\n", fileOut)
 }
