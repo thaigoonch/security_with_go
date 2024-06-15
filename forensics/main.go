@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"securitywithgo/forensics/files"
+	"securitywithgo/forensics/network"
 	"securitywithgo/forensics/steganography"
 )
 
@@ -34,4 +35,7 @@ func main() {
 
 	fmt.Println(">>> Running DetectZip():")
 	steganography.DetectZip()
+
+	fmt.Println(">>> Running GetHostNameFromIP():")
+	network.GetHostNameFromIP()
 }
