@@ -38,4 +38,7 @@ func main() {
 
 	fmt.Println(">>> Running GetHostNameFromIP():")
 	network.GetHostNameFromIP()
+
+	fmt.Println(">>> Running GetIPFromHostname():")
+	network.GetIPFromHostname()
 }

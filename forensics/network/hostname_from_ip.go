@@ -7,7 +7,6 @@ import (
 )
 
 func GetHostNameFromIP() {
-	// Hard-coded IP address example
 	ipAddress := "8.8.8.8"
 
 	// Parse the IP for validation
