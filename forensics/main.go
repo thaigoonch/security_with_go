@@ -2,6 +2,9 @@ package main
 
 import (
 	"fmt"
+	"log"
+	"os"
+	"path/filepath"
 
 	"securitywithgo/forensics/files"
 	"securitywithgo/forensics/network"
@@ -9,6 +12,8 @@ import (
 )
 
 func main() {
+	removeZipFiles()
+
 	fmt.Println(">>> Running getFileInfo():")
 	files.GetFileInfo()
 
@@ -41,4 +46,31 @@ func main() {
 
 	fmt.Println(">>> Running GetIPFromHostname():")
 	network.GetIPFromHostname()
+
+	fmt.Println(">>> Running GetMXFromDomain():")
+	network.GetMXFromDomain()
+}
+
+func removeZipFiles() {
+	// Define the directory
+	dir := "test_files"
+
+	// Read the directory
+	files, err := os.ReadDir(dir)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	// Loop through the files and remove ZIP files
+	for _, file := range files {
+		if !file.IsDir() && (filepath.Ext(file.Name()) == ".zip" || filepath.Ext(file.Name()) == ".jpg") {
+			filePath := filepath.Join(dir, file.Name())
+			err := os.Remove(filePath)
+			if err != nil {
+				log.Printf("Failed to remove %s: %v\n", filePath, err)
+			} else {
+				fmt.Printf("Removed %s\n", filePath)
+			}
+		}
+	}
 }
