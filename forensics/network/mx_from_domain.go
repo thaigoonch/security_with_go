@@ -6,7 +6,8 @@ import (
 	"net"
 )
 
-/* This program will take a domain name and return the MX records.
+/*
+This program will take a domain name and return the MX records.
 MX records, or mail exchanger records, are DNS records that point to the mail server.
 For example, the MX server of https://www.devdungeon.com/ is mail.devdungeon.com.
 The net.LookupMX() function performs this lookup and returns a slice of the net.MX structs:

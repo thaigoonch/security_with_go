@@ -12,7 +12,7 @@ import (
 )
 
 func main() {
-	removeZipFiles()
+	clearFiles()
 
 	fmt.Println(">>> Running getFileInfo():")
 	files.GetFileInfo()
@@ -49,19 +49,20 @@ func main() {
 
 	fmt.Println(">>> Running GetMXFromDomain():")
 	network.GetMXFromDomain()
+
+	fmt.Println(">>> Running GetNameServers():")
+	network.GetNameServers()
 }
 
-func removeZipFiles() {
-	// Define the directory
+func clearFiles() {
 	dir := "test_files"
 
-	// Read the directory
 	files, err := os.ReadDir(dir)
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	// Loop through the files and remove ZIP files
+	// Loop through the files and remove ZIP/JPG files
 	for _, file := range files {
 		if !file.IsDir() && (filepath.Ext(file.Name()) == ".zip" || filepath.Ext(file.Name()) == ".jpg") {
 			filePath := filepath.Join(dir, file.Name())

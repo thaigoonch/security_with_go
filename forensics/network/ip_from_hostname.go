@@ -7,7 +7,7 @@ import (
 )
 
 func GetIPFromHostname() {
-	hostname := "www.example.com"
+	hostname := "devdungeon.com"
 
 	fmt.Println("Looking up IP addresses for hostname: " + hostname)
 
