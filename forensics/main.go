@@ -6,51 +6,51 @@ import (
 	"os"
 	"path/filepath"
 
-	"securitywithgo/forensics/files"
-	"securitywithgo/forensics/network"
-	"securitywithgo/forensics/steganography"
+	"securitywithgo/forensics/subchapters/files"
+	"securitywithgo/forensics/subchapters/network"
+	"securitywithgo/forensics/subchapters/steganography"
 )
 
 func main() {
 	clearFiles()
 
-	fmt.Println(">>> Running getFileInfo():")
+	fmt.Println("\n\n>>> Running files.GetFileInfo():")
 	files.GetFileInfo()
 
-	fmt.Println(">>> Running getLargeFiles():")
+	fmt.Println("\n\n>>> Running files.GetLargeFiles():")
 	files.GetLargeFiles()
 
-	fmt.Println(">>> Running GetMostRecentlyModifiedFiles():")
+	fmt.Println("\n\n>>> Running files.GetMostRecentlyModifiedFiles():")
 	files.GetMostRecentlyModifiedFiles()
 
-	fmt.Println(">>> Running CheckBootSector():")
+	fmt.Println("\n\n>>> Running files.CheckBootSector():")
 	files.CheckBootSector()
 
-	fmt.Println(">>> Running CreateImage():")
+	fmt.Println("\n\n>>> Running steganography.CreateImage():")
 	steganography.CreateImage()
 
-	fmt.Println(">>> Running HashFiles():")
+	fmt.Println("\n\n>>> Running steganography.HashFiles():")
 	steganography.HashFiles()
 
-	fmt.Println(">>> Running CreateZip():")
+	fmt.Println("\n\n>>> Running steganography.CreateZip():")
 	steganography.CreateZip()
 
-	fmt.Println(">>> Running CreateHiddenArchive():")
+	fmt.Println("\n\n>>> Running CreateHiddenArchive():")
 	steganography.CreateHiddenArchive()
 
-	fmt.Println(">>> Running DetectZip():")
+	fmt.Println("\n\n>>> Running steganography.DetectZip():")
 	steganography.DetectZip()
 
-	fmt.Println(">>> Running GetHostNameFromIP():")
+	fmt.Println("\n\n>>> Running network.GetHostNameFromIP():")
 	network.GetHostNameFromIP()
 
-	fmt.Println(">>> Running GetIPFromHostname():")
+	fmt.Println("\n\n>>> Running network.GetIPFromHostname():")
 	network.GetIPFromHostname()
 
-	fmt.Println(">>> Running GetMXFromDomain():")
+	fmt.Println("\n\n>>> Running network.GetMXFromDomain():")
 	network.GetMXFromDomain()
 
-	fmt.Println(">>> Running GetNameServers():")
+	fmt.Println("\n\n>>> Running network.GetNameServers():")
 	network.GetNameServers()
 }
 

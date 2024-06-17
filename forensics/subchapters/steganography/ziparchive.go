@@ -60,7 +60,7 @@ func CreateZip() {
 		}
 	}
 
-	fmt.Printf("ZIP archive created successfully: %s\n\n", zipOut)
+	fmt.Printf("ZIP archive created successfully: %s\n", zipOut)
 }
 
 // addFileToZip adds a file to the ZIP archive

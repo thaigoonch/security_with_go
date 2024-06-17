@@ -43,5 +43,5 @@ func CreateImage() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Printf("image generated as %s\n\n", imgName)
+	fmt.Printf("image generated as %s\n", imgName)
 }

@@ -67,5 +67,5 @@ func CreateHiddenArchive() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Printf("hidden archive created successfully: %s\n\n", fileOut)
+	fmt.Printf("hidden archive created successfully: %s\n", fileOut)
 }
