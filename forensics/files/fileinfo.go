@@ -7,6 +7,13 @@ import (
 	"path/filepath"
 )
 
+/*
+"Getting file information"
+
+"This program will print the information about a file, namely when it was
+last modified, who owns it, how many bytes it is, and what its permissions are."
+*/
+
 func GetFileInfo() {
 	// Get the path to ../test_files
 	currentDir, err := os.Getwd()

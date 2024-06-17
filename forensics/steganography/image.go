@@ -9,6 +9,16 @@ import (
 	"os"
 )
 
+/*
+"Generating an image with random noise
+
+This program will create a JPEG image with every pixel set to a random color.
+It is a simple program so we have just a jpeg image available to work with.
+The Go standard library comes with jpeg, gif, and png packages.
+The interface to all different image types is the same, so swapping from
+a jpeg to a gif or png package is very easy:"
+*/
+
 func CreateImage() {
 	// 100x200 pixels
 	myImage := image.NewRGBA(image.Rect(0, 0, 100, 200))

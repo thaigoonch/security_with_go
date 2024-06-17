@@ -7,8 +7,10 @@ import (
 )
 
 /*
+"Looking up nameservers for a hostname
+
 This program will find nameservers associated with a given hostname.
-The primary function here is net.LookupNS():
+The primary function here is net.LookupNS():"
 */
 
 func GetNameServers() {

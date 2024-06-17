@@ -6,6 +6,14 @@ import (
 	"net"
 )
 
+/*
+"Looking up a hostname from an IP address
+
+This program will take an IP address and figure out what the hostnames are.
+The net.parseIP() function is used to validate the IP address provided,
+and net.LookupAddr() does the real work of figuring out what the hostname is."
+*/
+
 func GetHostNameFromIP() {
 	ipAddress := "8.8.8.8"
 

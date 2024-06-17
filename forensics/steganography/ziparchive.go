@@ -10,6 +10,18 @@ import (
 	"path/filepath"
 )
 
+/*
+"Creating a ZIP archive
+
+This program will create a ZIP archive, so we have an archive to use
+with our steganography experiments.
+The Go standard library has a zip package, but it also supports
+TAR archives with the tar package."
+
+Note: I had to use chatGPT to generate this code, because the book did not
+include the correct program for this part.
+*/
+
 func CreateZip() {
 	// Get the path to ../test_files
 	currentDir, err := os.Getwd()

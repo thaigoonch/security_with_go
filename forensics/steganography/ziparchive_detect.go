@@ -9,6 +9,17 @@ import (
 	"path/filepath"
 )
 
+/*
+"Detecting a ZIP archive in a JPEG image
+
+If data is hidden using the technique from [CreateZip()],
+it can be detected by searching for the ZIP file signature in the image.
+A file may have a .jpg extension and still load properly in a photo viewer,
+but it may still have a ZIP archive stored in the file.
+The following program searches through a file and looks for a ZIP file signature.
+We can run it against the file created in [CreateZip()]:"
+*/
+
 func DetectZip() {
 	// Get the path to ../test_files
 	currentDir, err := os.Getwd()

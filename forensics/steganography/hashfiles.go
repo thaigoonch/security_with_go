@@ -12,6 +12,13 @@ import (
 	"path/filepath"
 )
 
+/* This code was included in the book under the section
+"Detecting a ZIP archive in a JPEG image", I believe as a mistake.
+
+From what I can understand without any context from the book, this program
+calculates the MD5, SHA-1, SHA-256, and SHA-512 hashes for the files.
+*/
+
 func HashFiles() {
 	// Get the path to ../test_files
 	currentDir, err := os.Getwd()
