@@ -35,7 +35,7 @@ func main() {
 	fmt.Println("\n\n>>> Running steganography.CreateZip():")
 	steganography.CreateZip()
 
-	fmt.Println("\n\n>>> Running CreateHiddenArchive():")
+	fmt.Println("\n\n>>> Running steganography.CreateHiddenArchive():")
 	steganography.CreateHiddenArchive()
 
 	fmt.Println("\n\n>>> Running steganography.DetectZip():")

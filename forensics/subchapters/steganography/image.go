@@ -37,7 +37,10 @@ func CreateImage() {
 		log.Fatal(err)
 	}
 
-	jpeg.Encode(outputFile, myImage, nil)
+	err = jpeg.Encode(outputFile, myImage, nil)
+	if err != nil {
+		log.Fatal(err)
+	}
 
 	err = outputFile.Close()
 	if err != nil {

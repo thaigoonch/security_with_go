@@ -6,7 +6,6 @@ import (
 	"crypto/sha256"
 	"crypto/sha512"
 	"fmt"
-	"io/ioutil"
 	"log"
 	"os"
 	"path/filepath"
@@ -27,7 +26,7 @@ func HashFiles() {
 	}
 	dir := filepath.Join(currentDir, "test_files")
 
-	files, err := ioutil.ReadDir(dir)
+	files, err := os.ReadDir(dir)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -41,7 +40,7 @@ func HashFiles() {
 		filename := filepath.Join(dir, file.Name())
 
 		// Get bytes from file
-		data, err := ioutil.ReadFile(filename)
+		data, err := os.ReadFile(filename)
 		if err != nil {
 			log.Fatal(err)
 		}
