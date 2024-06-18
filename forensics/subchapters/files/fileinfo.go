@@ -22,25 +22,17 @@ func GetFileInfo() {
 	}
 	dir := filepath.Join(currentDir, "test_files")
 
-	err = filepath.Walk(dir, func(path string, info os.FileInfo, err error) error {
-		if err != nil {
-			log.Println(err)
-			return nil
-		}
-
-		// Print file info if it's a file (not a directory)
-		if !info.IsDir() {
-			fmt.Println("File name:", info.Name())
-			fmt.Println("Size in bytes:", info.Size())
-			fmt.Println("Permissions:", info.Mode())
-			fmt.Println("Last modified:", info.ModTime())
-			fmt.Println("Is Directory: ", info.IsDir())
-			fmt.Printf("System interface type: %T\n", info.Sys())
-			fmt.Printf("System info: %+v\n\n", info.Sys())
-		}
-		return nil
-	})
+	// Stat returns file info. It will return
+	// an error if there is no file.
+	fileInfo, err := os.Stat(fmt.Sprintf("%s/test.txt", dir))
 	if err != nil {
 		log.Fatal(err)
 	}
+	fmt.Println("File name:", fileInfo.Name())
+	fmt.Println("Size in bytes:", fileInfo.Size())
+	fmt.Println("Permissions:", fileInfo.Mode())
+	fmt.Println("Last modified:", fileInfo.ModTime())
+	fmt.Println("Is Directory: ", fileInfo.IsDir())
+	fmt.Printf("System interface type: %T\n", fileInfo.Sys())
+	fmt.Printf("System info: %+v\n\n", fileInfo.Sys())
 }
